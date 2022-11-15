@@ -166,7 +166,6 @@
 }
 
 .rightside-menu {
-    padding-top: 41px;
     position: absolute;
     right: 0;
     top: 0;
@@ -174,6 +173,12 @@
     max-width: 694px;
     width: 100%;
     background-color: white;
+    padding-top: 41px;
+    box-shadow: 8px 0px 17px 0px #000;
+    transition: all .5s;
+    &.rightside-menu--close {
+        transform: translateX(500%);
+    }
     &__close {
         background-color: transparent;
         border: none;
@@ -192,6 +197,20 @@
         display: inline-block;
     }
     &__title {
+        position: relative;
+        margin-bottom: 17px;
+        padding-bottom: 17px;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 252px;
+            margin: 0 auto;
+            height: 1px;
+            background-color: #979797;
+        }
         color: $title;
         @extend %title-font;
         font-size: 36px;
@@ -201,7 +220,7 @@
         margin-bottom: 75px;
     }
     &__image {
-        max-width:
+        max-width: 483px;
     }
 }
 
