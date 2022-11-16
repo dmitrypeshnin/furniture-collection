@@ -7,4 +7,5 @@ $(function () {
         $('.rightside-menu').addClass('rightside-menu--close');
     });
 
+    $('.top__slider').slick({});
 })
